@@ -24,7 +24,7 @@ public class WeatherClientTest {
 
     @BeforeEach
     public void setUp() throws Exception {
-        subject = new WeatherClient(restTemplate, "http://localhost:8089", "someAppId");
+        subject = new WeatherClient(restTemplate);
     }
 
     @Test

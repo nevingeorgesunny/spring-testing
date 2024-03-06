@@ -29,6 +29,8 @@ dependencies {
 	testImplementation 'au.com.dius.pact.consumer:junit5:4.4.8'
 	testImplementation 'au.com.dius.pact.provider:junit5spring:4.4.8'
 	testImplementation 'io.github.bonigarcia:webdrivermanager:5.6.0'
+	// Add H2 database dependency for runtime
+	runtimeOnly 'com.h2database:h2'
 }
 
 tasks.named('test') {

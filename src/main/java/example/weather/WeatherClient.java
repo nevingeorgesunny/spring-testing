@@ -17,12 +17,10 @@ public class WeatherClient {
     private final String weatherServiceApiKey;
 
     @Autowired
-    public WeatherClient(final RestTemplate restTemplate,
-                         @Value("${weather.url}") final String weatherServiceUrl,
-                         @Value("${weather.api_secret}") final String weatherServiceApiKey) {
+    public WeatherClient(final RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
-        this.weatherServiceUrl = weatherServiceUrl;
-        this.weatherServiceApiKey = weatherServiceApiKey;
+        this.weatherServiceUrl = "http://api.openweathermap.org/";
+        this.weatherServiceApiKey = "5ee161c2acf7bb30037f1bf20ca89637";
     }
 
     public Optional<WeatherResponse> fetchWeather() {
